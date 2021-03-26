@@ -1,7 +1,7 @@
 __all__ = [
     "yolov3_d53_320_273e",
     "yolov3_d53_mstrain_416_273e",
-    "yolov3_d53_mstrain-608_273e",
+    "yolov3_d53_mstrain_608_273e",
 ]
 
 from icevision.imports import *
