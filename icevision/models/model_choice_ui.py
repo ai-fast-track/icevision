@@ -75,7 +75,7 @@ def od_library_change(change):
 
     if lib_name == "MMDetection":
         lib_type = models.mmdet.models
-        model_list = ["sparse_rcnn", "retinanet", "mask_rcnn"]
+        model_list = ["sparse_rcnn", "retinanet", "mask_rcnn", "yolact"]
 
     if lib_name == "Ross Wightman":
         lib_type = models.ross

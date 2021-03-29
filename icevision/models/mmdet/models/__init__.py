@@ -8,3 +8,4 @@ from icevision.models.mmdet.models import sparse_rcnn
 
 # segmentation
 from icevision.models.mmdet.models import mask_rcnn
+from icevision.models.mmdet.models import yolact
