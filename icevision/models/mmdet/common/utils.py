@@ -34,6 +34,11 @@ def build_model(
         else:
             cfg.model.roi_head.bbox_head.num_classes = num_classes - 1
 
+    if model_type == "one_stage_detector_mask":
+        cfg.model.bbox_head.num_classes = num_classes - 1
+        cfg.model.segm_head.num_classes = num_classes - 1
+        cfg.model.mask_head.num_classes = num_classes - 1
+
     if model_type == "two_stage_detector_mask":
         cfg.model.roi_head.bbox_head.num_classes = num_classes - 1
         cfg.model.roi_head.mask_head.num_classes = num_classes - 1
