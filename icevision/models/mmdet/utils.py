@@ -35,7 +35,8 @@ def param_groups(model):
     layers = []
     layers += [nn.Sequential(body.conv1, body.bn1)]
     layers += [getattr(body, l) for l in body.res_layers]
-    layers += [model.neck]
+    if hasattr(model, 'neck'):
+        layers += [model.neck]
 
     if isinstance(model, SingleStageDetector):
         layers += [model.bbox_head]
